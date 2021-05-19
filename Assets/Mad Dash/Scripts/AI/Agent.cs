@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class AgentSmith : MonoBehaviour
+public class Agent : MonoBehaviour
 {
     private NavMeshAgent agent;
     private WayPoint[] waypoints;
