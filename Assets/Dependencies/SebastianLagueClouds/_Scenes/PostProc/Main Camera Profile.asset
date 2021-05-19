@@ -1389,14 +1389,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  m_Script: {fileID: 0}
   m_Name: Main Camera Profile
   m_EditorClassIdentifier: 
-  settings:
-  - {fileID: -2283805584893624798}
-  - {fileID: -7045467591834309674}
-  - {fileID: 147841436786590225}
-  - {fileID: -154401903544690823}
 --- !u!114 &147841436786590225
 MonoBehaviour:
   m_ObjectHideFlags: 3
