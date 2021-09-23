@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Airborne", false);
             bool isRunning = false;
             targetRotation = Quaternion.Euler(0, cameraGameObject.transform.rotation.eulerAngles.y,0);
-            controlForce = targetRotation * new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized * (movementForce * Time.fixedDeltaTime);
+            controlForce = targetRotation * new Vector3(0, 0, Input.GetAxisRaw("Vertical")).normalized * (movementForce * Time.fixedDeltaTime);
             if(Input.GetAxisRaw("Fire3") > 0.1f)
             {
                 controlForce *= 2;
