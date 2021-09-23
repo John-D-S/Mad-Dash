@@ -6,15 +6,21 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("-- Position Settings --")] 
+    [SerializeField] private float minYPos = -100;
+    
+    [Header("-- Movement Settings --")]
     [SerializeField] private float jumpSpeed;
     [SerializeField] private float movementForce;
     [SerializeField] private float maxGroundSpeed;
+    
     [Header("-- Camera Settings --")]
     [SerializeField, Tooltip("The camera that rotates around the player")] private GameObject cameraGameObject;
     [SerializeField, Tooltip("The maximum angle the camera can look up or down.")] private float maxVerticalCameraAngle = 85;
     [SerializeField, Tooltip("What should be the camera's position in relation to the player.")] private Vector3 cameraOffset = Vector3.back * 10;
     [SerializeField, Tooltip("what position in relation to the player should the camera be looking at.")] private Vector3 cameraLookPosition = Vector3.up;
 
+    [Header("-- Animation Settings --")]
     [SerializeField] private Animator animator;
     private Vector3 currentVelocity;
     private Vector3 controlForce;
@@ -23,6 +29,8 @@ public class PlayerController : MonoBehaviour
     private float currentCameraXRotation = 0;
     private float currentCameraYRotation = 0;
     private Quaternion targetRotation = Quaternion.identity;
+
+    private Vector3 initialPosition;
     
     private CharacterController characterController;
     private void Start()
@@ -30,7 +38,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        initialPosition = transform.position;
     }
 
     private void UpdateVelocity()
@@ -46,10 +54,19 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.1f);
-        UpdateVelocity();
-        characterController.SimpleMove(currentVelocity);
-        hasJumped = false;
+        if(transform.position.y < minYPos)
+        {
+            transform.position = initialPosition;
+            
+            currentVelocity = Vector3.zero;
+        }
+        else
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.1f);
+            UpdateVelocity();
+            characterController.SimpleMove(currentVelocity);
+            hasJumped = false;
+        }
     }
 
     private void Update()
@@ -66,7 +83,6 @@ public class PlayerController : MonoBehaviour
                 isRunning = true;
             }
 
-            Debug.Log(isRunning);
             if(controlForce.magnitude > 0.1f)
             {
                 if(isRunning)

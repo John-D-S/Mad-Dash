@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Mad Dash/Scenes/Menu.unity
+    guid: 0c18c61663a37ab4ca51bf3e8eb12598
+  - enabled: 1
+    path: Assets/Mad Dash/Scenes/World 1.unity
+    guid: fc69dd0fb34a7cc4dbd3f98db648910f
   m_configObjects: {}
