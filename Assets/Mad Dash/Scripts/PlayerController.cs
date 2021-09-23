@@ -49,6 +49,11 @@ public class PlayerController : MonoBehaviour
         if(characterController.isGrounded)
         {
             currentVelocity -= characterController.velocity * (characterController.velocity.magnitude / maxGroundSpeed);
+            Debug.Log(currentVelocity.magnitude);
+            if(currentVelocity.magnitude < 1.75f)
+            {
+                currentVelocity -= 0.5f * currentVelocity;
+            }
         }
     }
     

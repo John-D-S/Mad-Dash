@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Mad Dash/Scenes/World 1.unity
     guid: fc69dd0fb34a7cc4dbd3f98db648910f
+  - enabled: 1
+    path: Assets/Mad Dash/Scenes/World 2.unity
+    guid: a63fc853e61e05c478f7ceabea3c547d
   m_configObjects: {}

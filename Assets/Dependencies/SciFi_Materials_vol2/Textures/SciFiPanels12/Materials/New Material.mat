@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SciFiPanels25
+  m_Name: New Material
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 5fc46485fe8070d46a520ef3bf5b62f1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 234669488036a034b9138cd11287caa0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -38,21 +38,21 @@ Material:
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 0.25, y: 0.25}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0, y: 0.75}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dd7a535b0391fcd4a9addeee6ac1abec, type: 3}
+        m_Texture: {fileID: 2800000, guid: d72810738ebb6fa4f8d27a76193a48b1, type: 3}
         m_Scale: {x: 0.25, y: 0.25}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0, y: 0.75}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 9c876c58de7c9cd40b23740723a984f0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 694e65280e33c674183959d9c663c06e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 8c595aca3c5d7f5479dd644c4c7bbb8c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7a242a55845d84d4db4aff902928e4a7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 9f8189887b21bcd499d9e14abcf80b1a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3c169ad8cd9277e4b9825615f66ee3a4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:

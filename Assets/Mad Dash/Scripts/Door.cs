@@ -39,7 +39,6 @@ public class Door : MonoBehaviour
             else
                 return closedDoorHeight;
         }
-        set { }
     }
 
     private void OnValidate()
