@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField]
+    [Header("-- Door objects --")]
+    [SerializeField, Tooltip("The left door frame GameObject, it should have a mesh renderer")]
     private GameObject leftDoorFrame;
-    [SerializeField]
+    [SerializeField, Tooltip("The right door frame GameObject, it should have a mesh renderer")]
     private GameObject rightDoorFrame;
-    [SerializeField]
+    [SerializeField, Tooltip("The part of the door that moves")]
     private GameObject doorPart;
 
+    [Header("-- Door Movement settings --")]
     //the localPosition.y of the door at its lowest
     private float closedDoorHeight;
-    //the localPosition.y of the door at its highest
-    [SerializeField]
+    [SerializeField, Tooltip("the localPosition.y of the door at its highest")]
     private float openedDoorHeight = 10;
-    //the width of the door
-    [SerializeField]
+    [SerializeField, Tooltip("the width of the door")]
     private float doorWidth = 10;
-    [SerializeField]
+    [SerializeField, Tooltip("how fast the door opens and closes")]
     private float doorMoveSpeed = 3;
     private float DoorYpos => doorPart.transform.localPosition.y;
 
@@ -57,8 +57,14 @@ public class Door : MonoBehaviour
         doorPart.transform.localScale = new Vector3(1 * doorWidth - 1, openedDoorHeight, 1);
     }
 
+    /// <summary>
+    /// set the door height.
+    /// </summary>
     private void SetDoorHeight(float _YPos) => doorPart.transform.localPosition = new Vector3(doorPart.transform.localPosition.x, _YPos, doorPart.transform.localPosition.z);
 
+    /// <summary>
+    /// set the color of the doorframe meshrenderers
+    /// </summary>
     public void SetColor(Color _color) 
     { 
         leftDoorFrameMeshRenderer.material.color = _color;
@@ -78,14 +84,14 @@ public class Door : MonoBehaviour
         //if the door's height is below its target, move it up until it isn't; visa versa for if it is above it's target.
         if (DoorYpos < TargetHeight)
         {
-            doorPart.transform.localPosition += Vector3.up * Time.deltaTime * doorMoveSpeed;
+            doorPart.transform.localPosition += Vector3.up * (Time.deltaTime * doorMoveSpeed);
             if (DoorYpos > TargetHeight)
                 SetDoorHeight(TargetHeight);
                 
         }
         else if (DoorYpos > TargetHeight)
         {
-            doorPart.transform.localPosition -= Vector3.up * Time.deltaTime * doorMoveSpeed;
+            doorPart.transform.localPosition -= Vector3.up * (Time.deltaTime * doorMoveSpeed);
             if (DoorYpos < TargetHeight)
                 SetDoorHeight(TargetHeight);
         }

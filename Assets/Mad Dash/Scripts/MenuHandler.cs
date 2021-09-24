@@ -30,6 +30,7 @@ public class MenuHandler : MonoBehaviour
 
 	private void Start()
 	{
+		//unlock the cursor if the current scene build index is 0
 		if(SceneManager.GetActiveScene().buildIndex == 0)
 		{
 			Cursor.lockState = CursorLockMode.None;

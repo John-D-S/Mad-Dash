@@ -6,6 +6,6 @@ public class SmartEndGoal : SmartAiTarget
 {
 	protected override void InterractFunctionality()
 	{
-		
+		//do nothing.
 	}
 }

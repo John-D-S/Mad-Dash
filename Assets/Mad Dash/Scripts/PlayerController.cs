@@ -41,6 +41,9 @@ public class PlayerController : MonoBehaviour
         initialPosition = transform.position;
     }
 
+    /// <summary>
+    /// simulate physics and apply the player's control stuff
+    /// </summary>
     private void UpdateVelocity()
     {
         hasJumped = false;
@@ -59,6 +62,7 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
+        //if the player falls down past minYpos, reset its position
         if(transform.position.y < minYPos)
         {
             transform.position = initialPosition;
@@ -67,19 +71,25 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            //lerp the rotation to match the camera's rotation
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.1f);
+            //update the character's velocity, then apply it by using simpleMove
             UpdateVelocity();
             characterController.SimpleMove(currentVelocity);
+            //set HasJumped to false.
             hasJumped = false;
         }
     }
 
     private void Update()
     {
+        //if the character controller is grounded, the player can control it.
         if(characterController.isGrounded)
         {
+            //allow the animator to use the grounded animaitons again
             animator.SetBool("Airborne", false);
             bool isRunning = false;
+            //rotate the camera to match the 
             targetRotation = Quaternion.Euler(0, cameraGameObject.transform.rotation.eulerAngles.y,0);
             controlForce = targetRotation * new Vector3(0, 0, Input.GetAxisRaw("Vertical")).normalized * (movementForce * Time.fixedDeltaTime);
             if(Input.GetAxisRaw("Fire3") > 0.1f)
