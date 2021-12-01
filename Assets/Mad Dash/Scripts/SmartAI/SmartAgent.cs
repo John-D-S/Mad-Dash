@@ -56,6 +56,7 @@ public class SmartAgent : MonoBehaviour
     /// <summary>
     /// returns the next SmartAiTarget with the lowest aiPriority which has not been activated and can be navigated to.
     /// </summary>
+    /// <returns>The next SmartAiTarget with the lowest aiPriority which has not been activated and can be navigated to.</returns>
     private SmartAiTarget NextDestination()
     {
         //iterating over aiTargets in order will ensure that the SmartAiTarget that is returned will have the lowest priority, since it has been sorted.

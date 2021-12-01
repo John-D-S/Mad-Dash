@@ -12,6 +12,7 @@ public class MenuHandler : MonoBehaviour
 	/// <summary>
 	/// change to the scene with the given scene build index
 	/// </summary>
+	/// <param name="_sceneIndex">The index of the scene to switch to</param>
 	public void ChangeToScene(int _sceneIndex)
 	{
 		SceneManager.LoadScene(_sceneIndex);

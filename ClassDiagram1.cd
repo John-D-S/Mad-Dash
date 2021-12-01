@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PlayerController">
+    <Position X="7.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>JEQEQAAAAiAAAQAhAAABAYAAAAAAAAAAAECAAAIQAAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rotate">
+    <Position X="7.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\SmartAI\Rotate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartAgent">
+    <Position X="1" Y="7.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAqAAIQJAAAQEgAAEACAACAAAAAEAAABACAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\SmartAI\SmartAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartAiTarget">
+    <Position X="5.5" Y="7.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAACCIAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\SmartAI\SmartAiTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartButton">
+    <Position X="3.5" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\SmartAI\SmartButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartCoin">
+    <Position X="5.5" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\SmartAI\SmartCoin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartDoor">
+    <Position X="3.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiIgAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\SmartAI\SmartDoor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmartEndGoal">
+    <Position X="7.5" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\SmartAI\SmartEndGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Door">
+    <Position X="0.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAIACAAAAAQACEAABIAAAIAQBAIAAgAAQAAQCA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\Door.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoorGroupWrapper">
+    <Position X="3.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\DoorManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoorManager">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAACAAgAAAAAAIAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\DoorManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FramerateLimiter">
+    <Position X="9.5" Y="13" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAABA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\FramerateLimiter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuHandler">
+    <Position X="11.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAIAAAABEAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\MenuHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WayPoint">
+    <Position X="4.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\AI\WayPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Agent">
+    <Position X="2" Y="13.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAQAIAAAACAAIQBAAAQEgAAEAAIACAAAAAEAAAAACAA=</HashCode>
+      <FileName>Assets\Mad Dash\Scripts\AI\Agent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
